@@ -1,6 +1,8 @@
-import { Box, Chip, Divider, Typography } from "@mui/material";
+import { Avatar, AvatarGroup, Box, Chip, Divider, Typography } from "@mui/material";
 import "./task-item.scss";
 import { COLORS, TASK_STATUS } from "../../common/enums";
+import { lightBlue, lightGreen, orange, purple, red } from "@mui/material/colors";
+// import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 type Props = {
   task: {
     title: string;
@@ -9,7 +11,7 @@ type Props = {
     tags: string[];
   };
 };
-const TaskItem = ({ task: { title, description, status, tags } }: Props) => {
+const TaskItem = ({ task: { title, status, tags } }: Props) => {
   return (
     <Box className="wrapper" sx={{ backgroundColor: COLORS[status] }}>
       <Box className="header">
@@ -31,9 +33,24 @@ const TaskItem = ({ task: { title, description, status, tags } }: Props) => {
               })
             : null}
         </Box>
+        
       </Box>
       <Box className="footer">
-        <Typography>Footer</Typography>
+        <Box>
+        <AvatarGroup  max={3}>
+          <Avatar sx={{ bgcolor: red[500], width:40, height:40}}>SS</Avatar>
+          <Avatar sx={{ bgcolor: orange[500], width:40, height:40 }}>RP</Avatar>
+          <Avatar sx={{ bgcolor: purple[500], width:40, height:40 }}>NS</Avatar>
+          <Avatar sx={{ bgcolor: lightBlue[500], width:40, height:40 }}>MG</Avatar>
+          <Avatar sx={{ bgcolor: lightGreen[500], width:40, height:40 }}>RS</Avatar>
+        </AvatarGroup>
+        </Box>
+        
+        {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <DemoContainer components={['DatePicker']}>
+        <DatePicker label="Basic date picker" />
+      </DemoContainer>
+    </LocalizationProvider> */}
       </Box>
     </Box>
   );

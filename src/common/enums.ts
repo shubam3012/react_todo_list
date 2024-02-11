@@ -11,3 +11,10 @@ export enum TASK_STATUS {
   IN_REVIEW = "IN_REVIEW",
   IN_PROGRESS = "IN_PROGRESS",
 }
+
+export enum AVTAR{
+  COMPLETE = "COMPLETE",
+  HOLD = "HOLD",
+  IN_REVIEW = "IN_REVIEW",
+  IN_PROGESS = "IN_PROGRESS"
+}

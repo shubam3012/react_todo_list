@@ -6,26 +6,34 @@
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 10px;
-  height: 150px;
+  height: 200px;
   .chip {
     background-color: black;
     color: white;
+
+
   }
   .header {
     flex-grow: 1;
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    flex-wrap: wrap;
+    
 
 
   }
   .content {
     flex-grow: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 10px;
 
   }
   .footer {
     flex-grow: 1;
     padding: 10px;
+    padding: 2px;
   }
 }
