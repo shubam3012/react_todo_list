@@ -27,6 +27,7 @@ function App() {
         "tag2",
       ],
       status: TASK_STATUS.COMPLETE,
+      createdAt: new Date(),
     },
     {
       _id: "2",
@@ -34,6 +35,7 @@ function App() {
       description: "this is task 2",
       status: TASK_STATUS.IN_PROGRESS,
       tags: ["tag1", "tag2"],
+      createdAt: new Date(),
     },
     {
       _id: "3",
@@ -41,6 +43,7 @@ function App() {
       description: "this is task 3",
       status: TASK_STATUS.IN_REVIEW,
       tags: ["tag1", "tag2"],
+      createdAt: new Date(),
     },
     {
       _id: "4",
@@ -48,6 +51,7 @@ function App() {
       description: "this is task 4",
       status: TASK_STATUS.HOLD,
       tags: ["tag1", "tag2"],
+      createdAt: new Date(),
     },
   ];
 
